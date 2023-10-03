@@ -1,0 +1,16 @@
+// scss-docs-start table-variant
+@mixin table-variant($color, $background) {
+  .table-#{$color} {
+    --#{$variable-prefix}table-bg: var(--#{$variable-prefix}table-#{$color}-bg);
+    --#{$variable-prefix}table-striped-bg: var(--#{$variable-prefix}table-#{$color}-active-bg);
+    --#{$variable-prefix}table-striped-color: var(--#{$variable-prefix}table-#{$color}-active-color);
+    --#{$variable-prefix}table-active-bg: var(--#{$variable-prefix}table-#{$color}-striped-bg);
+    --#{$variable-prefix}table-active-color: var(--#{$variable-prefix}table-#{$color}-striped-color);
+    --#{$variable-prefix}table-hover-bg: var(--#{$variable-prefix}table-#{$color}-hover-bg);
+    --#{$variable-prefix}table-hover-color: var(--#{$variable-prefix}table-#{$color}-hover-color);
+
+    color:  var(--#{$variable-prefix}table-#{$color}-color);
+    border-color: var(--#{$variable-prefix}table-#{$color}-border-color);
+  }
+}
+// scss-docs-end table-variant

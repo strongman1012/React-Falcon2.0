@@ -1,0 +1,66 @@
+.nav-tabs {
+  border-bottom: 2px solid var(--#{$variable-prefix}border-color);
+
+  .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
+    border: var(--#{$variable-prefix}border-color);
+    color: var(--#{$variable-prefix}800);
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    &:hover,
+    &:focus {
+      border-color: var(--#{$variable-prefix}white);
+    }
+
+    &.disabled {
+      color: var(--#{$variable-prefix}400);
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-item{
+    .nav-link{
+      font-family:$font-family-base;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: var(--#{$variable-prefix}primary);
+    background-color: transparent;
+    border-bottom: 2px solid var(--#{$variable-prefix}primary);
+
+  }
+}
+
+.nav-pills-falcon {
+  background-color: var(--#{$variable-prefix}100);
+  border-radius: 0.25rem !important;
+  border: 1px solid var(--#{$variable-prefix}200);
+  .nav-link {
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
+  .btn {
+    box-shadow: none;
+    outline: 0;
+    color: var(--#{$variable-prefix}600);
+
+    &.active {
+      background-color: var(--#{$variable-prefix}nav-pills-falcon-active-bg-color) !important;
+      box-shadow: var(--#{$variable-prefix}btn-falcon-box-shadow) !important;
+      color: var(--#{$variable-prefix}btn-falcon-default-color);
+    }
+
+    &:active:focus {
+      box-shadow: none;
+    }
+
+    @include hover-focus {
+      color: var(--#{$variable-prefix}btn-falcon-default-color);
+    }
+  }
+}
